@@ -1,13 +1,13 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
-// import { Order } from "./order.entity";
+import { Order } from "./order.entity";
 
 @Entity({ name: 'payments' })
 export class Payment {
     @PrimaryGeneratedColumn('uuid')
     id!: string;
 
-    // @ManyToOne(() => Order, order => order.payments, { onDelete: 'CASCADE' })
-    // order?: Order;
+    @ManyToOne(() => Order, order => order.payments, { onDelete: 'CASCADE' })
+    order?: Order;
 
     @Column()
     paymentMethod!: string; // credit_card, paypal, bank_transfer

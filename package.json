@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
