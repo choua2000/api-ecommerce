@@ -22,7 +22,7 @@ export const SignUp = async (req: Request, res: Response) => {
     }
     const checkUser = await userRrepository.findOne({ where: { email } });
     if (checkUser) {
-      return res.status(400).json({ message: "User already exists" });
+      return res.status(400).json({ message: "User already exist" });
     }   
     const hashedPassword = await hashPassword(password);
 
@@ -34,7 +34,7 @@ export const SignUp = async (req: Request, res: Response) => {
     await userRrepository.save(newUser);
     return res
       .status(201)
-      .json({ message: "User created successfully", newUser });
+      .json({ message: "User register successfully", newUser });
   } catch (error) {
     return res
       .status(500)
