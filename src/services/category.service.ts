@@ -1,6 +1,6 @@
 
 import { Category } from "../entities/category.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 
 const categoryRepository = AppDataSource.getRepository(Category);
 

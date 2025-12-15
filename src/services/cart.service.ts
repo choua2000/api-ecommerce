@@ -1,7 +1,7 @@
 import { Cart } from "../entities/cart.entity";
 import { User } from "../entities/user.entity";
 import { Product } from "../entities/product.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 const cartRepository = AppDataSource.getRepository(Cart);
 const userRepository = AppDataSource.getRepository(User);
 const productRepository = AppDataSource.getRepository(Product);

@@ -1,6 +1,6 @@
 import { Product } from "../entities/product.entity";
 import { Category } from "../entities/category.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 
 const productRepository = AppDataSource.getRepository(Product);
 const categoryRepository = AppDataSource.getRepository(Category);
@@ -54,7 +54,6 @@ export const updateProduct = async (
   }
 ): Promise<Product | null> => {
   let categoryEntity = undefined;
-
   // If category is provided, fetch category by category ID
   if (updateData.categoryId) {
     categoryEntity = await categoryRepository.findOne({

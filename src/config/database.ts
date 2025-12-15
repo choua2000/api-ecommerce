@@ -10,11 +10,10 @@ export const AppDataSource = new DataSource({
     migrations: ["src/migrations/*.ts"],
     subscribers: ["src/subscribers/*.ts"],
 });
-AppDataSource.initialize()
-    .then(() => {
-        console.log("Connected to database successfully")
-    })
-    .catch((err) => {
-        console.error("Server error", err)
-    })
-    export default AppDataSource;
+// AppDataSource.initialize()
+//     .then(() => {
+//         console.log("Connected to database successfully")
+//     })
+//     .catch((err) => {
+//         console.error("Server error", err)
+//     })

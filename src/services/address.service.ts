@@ -1,6 +1,6 @@
 import { Address } from "../entities/address.entity";
 import { User } from "../entities/user.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 
 const addressRepository = AppDataSource.getRepository(Address);
 const userRepository = AppDataSource.getRepository(User);

@@ -1,7 +1,7 @@
 import { Review } from "../entities/review.entity";
 import { Product } from "../entities/product.entity";
 import { User } from "../entities/user.entity";
-import AppDataSource from "../config/database"; 
+import {AppDataSource} from "../config/database"; 
 
 const reviewRepository = AppDataSource.getRepository(Review);
 const productRepository = AppDataSource.getRepository(Product);

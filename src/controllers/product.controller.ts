@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Product } from "../entities/product.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 import { Category } from '../entities/category.entity';
 const productRpository = AppDataSource.getRepository(Product);
 import {

@@ -1,7 +1,7 @@
 import { Order } from "../entities/order.entity";
 import { Between } from "typeorm";
 import { User } from "../entities/user.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 import { OrderItem } from '../entities/orderItem.entity';
 const orderRepository = AppDataSource.getRepository(Order);
 const userRepository = AppDataSource.getRepository(User);

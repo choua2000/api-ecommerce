@@ -1,5 +1,5 @@
 import { OrderItem } from "../entities/orderItem.entity";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 import { Order } from "../entities/order.entity";
 import { Product } from "../entities/product.entity";
 import { Between } from "typeorm";

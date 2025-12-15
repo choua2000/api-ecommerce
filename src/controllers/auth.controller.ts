@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 import { User } from "../entities/user.entity";
-import { deleteUser,updateUser} from "../services/user.service";
 import {
   hashPassword,
   comparePassword,
@@ -22,7 +21,7 @@ export const SignUp = async (req: Request, res: Response) => {
     }
     const checkUser = await userRrepository.findOne({ where: { email } });
     if (checkUser) {
-      return res.status(400).json({ message: "User already exist" });
+      return res.status(400).json({ message: "User already exists" });
     }   
     const hashedPassword = await hashPassword(password);
 

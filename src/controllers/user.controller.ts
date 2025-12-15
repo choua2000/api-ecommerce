@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import AppDataSource from "../config/database";
+import {AppDataSource} from "../config/database";
 import { User } from "../entities/user.entity";
 import { deleteUser, updateUser, forgotPassword, updatePassword } from "../services/user.service";
 

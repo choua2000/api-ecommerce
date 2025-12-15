@@ -1,6 +1,6 @@
 import { Payment } from '../entities/payment.entity';
 import { Order } from '../entities/order.entity';
-import AppDataSource from '../config/database';
+import {AppDataSource} from '../config/database';
 
 const paymentRepository = AppDataSource.getRepository(Payment);
 const orderRepository = AppDataSource.getRepository(Order);
