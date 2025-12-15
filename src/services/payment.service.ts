@@ -21,3 +21,31 @@ export const getAllPayments = async (): Promise<Payment[]> => {
 export const getPaymentById = async (paymentId: string): Promise<Payment | null> => {
     return await paymentRepository.findOne({ where: { id: paymentId } });
 };
+
+
+// MEAN: Update a payment by ID
+export const updatePayment = async (paymentId: string, updateData: Partial<Payment>): Promise<Payment | null> => {
+    const payment = await paymentRepository.findOne({ where: { id: paymentId } });
+    if (!payment) {
+        return null;
+    }
+    Object.assign(payment, updateData);
+    return await paymentRepository.save(payment);
+};
+
+// MEAN: Delete a payment by ID
+export const deletePayment = async (paymentId: string): Promise<Payment | null> => {
+    const payment = await paymentRepository.findOne({ where: { id: paymentId } });
+    if (!payment) {
+        return null;
+    }
+    return await paymentRepository.remove(payment);
+};
+
+
+// MEAN: Get a payment by order ID
+export const getPaymentByOrderId = async (orderId: string): Promise<Payment | null> => {
+    return await paymentRepository.findOne({ where: { order: { id: orderId } } });
+};
+
+// 
